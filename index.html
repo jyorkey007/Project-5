@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Neighborhood Map</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBZuBE1I4dpVqahG1aUF8iuPzwqca56pxw"></script>       
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div id="map-canvas"></div>
+            <!-- Search form -->
+            <div class="row">
+                <div class="col-md-10"></div>
+                <div class="col-md-2 search-form">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-10"></div>
+                <div class="col-md-2 search-form">
+
+                <input class="search search-form" type="text" placeholder="Filter Location" data-bind="textInput: filter"/>
+
+                <ul data-bind="foreach: filteredArray" class="list-view">
+                    <li data-bind="text: name, click: $root.clickHandler"></li>
+                </ul>                    
+                </div>
+            </div>
+        </div>       
+        <script type='text/javascript' src='js/knockout-3.3.0.js'></script>
+        <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+        <script type='text/javascript' src='js/script.js'></script>
+    </body>
+</html>
